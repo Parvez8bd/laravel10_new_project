@@ -19,6 +19,11 @@
                 <div class="col-md-4">
                     <input type="text" name="name" class="form-control" id="name">
                 </div>
+                <div class="col-md-4">
+                    @error('name')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
+                </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-2">
@@ -26,6 +31,11 @@
                 </div>
                 <div class="col-md-4">
                     <input type="text" name="father_name" class="form-control" id="father_name">
+                </div>
+                <div class="col-md-4">
+                    @error('father_name')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
             <div class="row mt-3">
@@ -35,13 +45,23 @@
                 <div class="col-md-4">
                     <input type="text" name="mother_name" class="form-control" id="mother_name">
                 </div>
+                <div class="col-md-4">
+                    @error('mother_name')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
+                </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-2">
                     <label for="date" class="form-label">Date of birth:</label>
                 </div>
                 <div class="col-md-4">
-                    <input type="date" name="date" class="form-control" id="date">
+                    <input type="date" name="date_of_birth" class="form-control" id="date">
+                </div>
+                <div class="col-md-4">
+                    @error('date_of_birth')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
             <div class="row mt-3">
@@ -51,6 +71,11 @@
                 <div class="col-md-4">
                     <input type="numric" name="phone" class="form-control" id="phone">
                 </div>
+                <div class="col-md-4">
+                    @error('phone')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
+                </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-2">
@@ -59,6 +84,11 @@
                 <div class="col-md-4">
                     <input type="email" name="email" class="form-control" id="email">
                 </div>
+                <div class="col-md-4">
+                    @error('email')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
+                </div>
             </div>
 
             <div class="row mt-3">
@@ -66,7 +96,12 @@
                     <label for="country" class="form-label">Nationality:</label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="country" class="form-control" id="country">
+                    <input type="text" name="nationality" class="form-control" id="country">
+                </div>
+                <div class="col-md-4">
+                    @error('nationality')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
             <div class="row mt-3">
@@ -75,11 +110,16 @@
                 </div>
                 <div class="col-md-4">
                     <select class=" form-select" name="subject" id="subject">
-                        <option selected>Select Subject</option>
+                        <option selected disabled>Select Subject</option>
                         <option value="cse">CSE</option>
                         <option value="bba">BBA</option>
                         <option value="mba">MBA</option>
                     </select>
+                </div>
+                <div class="col-md-4">
+                    @error('subject')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
 
@@ -90,8 +130,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
-                            value="male">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male">
                         <label class="form-check-label" for="inlineRadio1">Male</label>
                     </div>
 
@@ -110,6 +149,11 @@
                         <button class="btn btn-info" type="reset">Reset</button>
                         <button class="btn btn-success" type="submit">Submit</button>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    @error('gender')
+                        <small class="alert alert-danger">{{ $message }}</small>
+                    @enderror
                 </div>
             </div>
         </form>
